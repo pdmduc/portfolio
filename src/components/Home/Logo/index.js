@@ -11,10 +11,13 @@ const Logo = () => {
   const didAnimate = useRef(false)
 
   useEffect(() => {
+    // if we already ran this once, skip!
     if (didAnimate.current) {
       return
     }
+    // otherwise, record that we're running it now and continue...
     didAnimate.current = true
+
     gsap.registerPlugin(DrawSVGPlugin)
 
     gsap

@@ -13,6 +13,8 @@
     height: auto;
     bottom: 0;
     transform: rotateZ(30deg) !important;
+    animation: rotateIn 1s linear both;
+    animation-delay: 1.4s;
   }
 
   .solid-logo {
@@ -24,11 +26,39 @@
     margin: auto;
     width: 100%;
     opacity: 0;
+    animation: my-animation 10s ease-in-out forwards;
     transform: rotateZ(30deg) !important;
+    // animation: backInRight 2s 4s;
+    // animation-fill-mode: forwards;
     z-index: 1;
   }
 }
 .svg-container {
   stroke: #3edbff;
   stroke-width: 1;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 5s linear forwards;
+}
+
+/* Define the keyframes for the animation */
+@keyframes my-animation {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Define the animation */
+@keyframes draw {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
 }

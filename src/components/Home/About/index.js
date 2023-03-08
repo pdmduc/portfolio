@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faCss3,
   faGitAlt,
-  faGithub,
   faHtml5,
   faJsSquare,
   faPython,

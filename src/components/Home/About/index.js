@@ -53,6 +53,9 @@ const About = () => {
         </div>
 
         <div className="stage-cube-cont">
+          <div id="stars"></div>
+          <div id="stars2"></div>
+          <div id="stars3"></div>
           <div className="cubespinner">
             <div className="face1">
               <FontAwesomeIcon icon={faReact} color="#5ED4F4" />
